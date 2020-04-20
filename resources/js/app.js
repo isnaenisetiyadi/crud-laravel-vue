@@ -14,15 +14,19 @@ import VueRouter from 'vue-router'
 
 Vue.use(VueRouter)
 
-const Foo = { template: '<div>foo</div>' }
-const Bar = { template: '<div>bar</div>' }
+// const Foo = { template: '<div>foo</div>' }
+// const Bar = { template: '<div>bar</div>' }
+
+// impor componen
+import Index from './components/Index.vue';
+import Create from './components/Create.vue';
 
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 
 
 const routes = [
-    { path: '/foo', component: Foo },
-    { path: '/bar', component: Bar }
+    { path: '/', component: Index },
+    { path: '/create', component: Create }
   ]
 
   const router = new VueRouter({
