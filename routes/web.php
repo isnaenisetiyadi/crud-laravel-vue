@@ -15,7 +15,12 @@
 //     return view('welcome');
 // });
 
+// use Illuminate\Routing\Route;
+use Illuminate\Support\Facades\Route;
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/', 'PostController@homepage')->name('homepage');
+
+Route::resource('/posts','PostController');
